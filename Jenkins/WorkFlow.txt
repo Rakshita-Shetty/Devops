@@ -1,0 +1,15 @@
+Continuos Integration Working Process:
+
+1) Initially create a free style project named java_compile
+2) Go to Source code management and pass the Git link URL
+3) After that Go to Build Environment and Invoke Top level Maven targetby choosing the Maven Version
+4) For choosing Maven version prior to that go to Dashboard -> ManageJenkins -> Global Tool Configuration here in Maven Add Maven and choose the version to 3.6.3
+5) Then choose the Goals to be clean compile and save the project
+6) After that Build the particular project
+7) Similarly create another project named java_package and follow the same process as above then choose the goals to be package and then build the project
+8) Here in this project go to workspace -> target there we see the .war file which basically contains code, applications and dependencies and can be deployed on any server
+9) Create another project named java_deploy and follow the same steps as above
+10) One addition step in build click on Add post build option and choose deploy war/ear to container by default this plugin is not available so need to install from Manage jenkins
+11) And specify the war/ear files to be **/*.war and choose context path to be JavaHello
+12) Next choose container to be Tomcat 9 and add the credentials and specify the path to be localohost:8081
+13) Next go to localhost:8081/JavaHello which basically display the content as present in .jsp file

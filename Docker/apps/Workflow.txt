@@ -1,0 +1,7 @@
+Initially Download XCVSrv -- An X Server for Windows -- https://sourceforge.net/projects/vcxsrv/
+
+1) docker run hello-world ( To check if docker is working fine )
+2) Move to the directory of the created app folder
+3) docker ps ( Check for running containers )
+4) docker build -t abiword .  or docker build -t chrome .
+5) docker run -e DISPLAY=<Ip address:0> -v C:\Users\ijari:\ijari abiword or docker run -e DISPLAY=<IP address:0> chrome
